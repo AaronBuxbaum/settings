@@ -3,14 +3,6 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# Poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # Percy
 export PERCY_PARALLEL_NONCE=`date`
 export PERCY_PARALLEL_TOTAL=`ls ~/work/web/sites/front-end/test/integration/features | grep -v .todo.feature | wc -l`
@@ -25,6 +17,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+# zsh completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
@@ -34,7 +29,7 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# iTerm
+# iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Local environment variables
