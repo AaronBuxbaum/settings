@@ -31,11 +31,17 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# oh-my-zsh Plugins
+# oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="agnoster"
 plugins=(
+  git
   virtualenv
 )
-ZSH_THEME="robbyrussell"
+source $ZSH/oh-my-zsh.sh
 
 # iTerm
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Local environment variables
+test -e "${HOME}/.env.local" && source "${HOME}/.env.local"
