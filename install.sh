@@ -5,25 +5,22 @@ brew cask install iterm2
 brew install zsh zsh-completions
 chsh -s /bin/zsh
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Install Poetry
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-
-# Install Pathogen (for VIM)
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-# Install Prezto
-# zsh
-# git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-# setopt EXTENDED_GLOB
-# for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-#   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-# done
-
 # Install PyEnv Virtualenv
 # TODO
 
-cp -R files/. ~/
+# Copy into your filesystem
+yes | cp -R files/. ~/
+yes | cp -R color-scheme/solarized/vim-colors-solarized/colors/. ~/.vim/colors/
+yes | cp plugins.vim ~/.vim/plugins.vim
+
+# Add local environment variables
+# TODO: add .env

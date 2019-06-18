@@ -1,8 +1,8 @@
 Terminal:
 iTerm
 Zsh
-Prezto
-Pathogen
+oh-my-zsh
+vim-plug
 
 Node:
 NVM
