@@ -1,7 +1,3 @@
-# PyEnv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:/usr/local/bin:$PATH"
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
@@ -23,12 +19,10 @@ export PERCY_PARALLEL_TOTAL=`ls ~/work/web/sites/front-end/test/integration/feat
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
-# PyEnv Virtualenv
-export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH"
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv init -)"
+# PyEnv and Pyenv Virtualenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 # oh-my-zsh

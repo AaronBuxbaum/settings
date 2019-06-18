@@ -6,7 +6,6 @@ colorscheme solarized
 filetype plugin indent on
 
 " File behavior
-set expandtab
 set smarttab
 set linebreak
 

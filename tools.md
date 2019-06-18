@@ -1,7 +1,7 @@
 Terminal:
 iTerm
-Zsh
-oh-my-zsh
+zsh
+oh my zsh
 vim-plug
 
 Node:
@@ -9,4 +9,5 @@ NVM
 
 Python:
 Poetry
-PyEnv Virtualenv
+Pyenv
+Pyenv Virtualenv
