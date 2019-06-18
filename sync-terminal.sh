@@ -1,3 +1,6 @@
+# Install submodules
+git submodule update --init --recursive
+
 # Copy everything into the filesystem
 yes | cp -R files/. ~/
 mkdir -p ~/.vim/colors
