@@ -30,7 +30,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="oxide"
 plugins=(
-  aws
   docker
   docker-compose
   git
@@ -40,9 +39,7 @@ plugins=(
   postgres
   pyenv
   python
-  rand-quote
   virtualenv
-  vscode
   yarn
 )
 source $ZSH/oh-my-zsh.sh
