@@ -35,7 +35,6 @@ plugins=(
   docker-compose
   git
   kubectl
-  minikube
   nvm
   osx
   postgres
